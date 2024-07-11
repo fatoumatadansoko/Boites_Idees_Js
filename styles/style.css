@@ -1,0 +1,11 @@
+.error { color: red; }
+.form-container {
+    background-color: #f8d7da; /* Rouge clair */
+    padding: 20px;
+    border-radius: 5px;
+}
+.idee-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
