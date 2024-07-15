@@ -5,18 +5,15 @@
     <title>Liste des idées</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-XYZ" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h1>Idées</h1>
-                <div id='idee-container' class="row"></div>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h1>Ajouter une idée</h1>
-                <div class="form-container"> <!-- Ajout de la classe form-container -->
+                <div class="form-container">
                     <form id="idee-form">
                         <div class="form-group">
                             <label for="libelle">Libellé :</label>
@@ -30,12 +27,13 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message :</label>
-                            <input id="message" class="form-control" placeholder="Message..." required>
+                            <textarea id="message" class="form-control" placeholder="Message..." required maxlength="255"></textarea>
                             <div id="errorMessage" class="error"></div>
                         </div>
-                        <div class="form-group">
+                        
+                        <div class="form-group" style="display: none;">
                             <label for="etat">État :</label>
-                            <input id="etat" class="form-control" placeholder="État..." required>
+                            <input id="etat" class="form-control" value="En attente" readonly>
                             <div id="errorEtat" class="error"></div>
                         </div>
                         <div class="form-group">
@@ -48,9 +46,13 @@
                             </select>
                             <div id="errorCategorie" class="error"></div>
                         </div>
-                        <button type="submit" id="submitBtn" class="btn btn-primary" disabled>Ajouter une idée</button>
+                        <button type="submit" id="submitBtn" class="btn btn-custom" disabled>Ajouter une idée</button>
                     </form>
                 </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Idées soumises</h1>
+                <div id='idee-container' class="row"></div>
             </div>
         </div>
     </div>
